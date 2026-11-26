@@ -25,7 +25,7 @@ if (menuButton && navigation) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 650) closeMenu();
+    if (window.innerWidth > 700) closeMenu();
   });
 }
 
@@ -44,7 +44,7 @@ if ('IntersectionObserver' in window) {
         });
       }
     });
-  }, { rootMargin: '-30% 0px -60% 0px' });
+  }, { rootMargin: '-28% 0px -62% 0px' });
 
   sections.forEach((section) => observer.observe(section));
 }
