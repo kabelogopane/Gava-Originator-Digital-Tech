@@ -147,7 +147,8 @@ function showQuestions(value){
     const active=group.dataset.questions===value;
     group.hidden=!active;
     group.querySelectorAll('input,select,textarea').forEach(field=>{
-      field.disabled=!active;\n      field.required=active && field.dataset.required==='true';
+      field.disabled=!active;
+      field.required=active && field.dataset.required==='true';
     });
   });
 }
@@ -156,33 +157,43 @@ const requested=params.get('service');
 if(requested && [...serviceSelect.options].some(option=>option.value===requested)){
   serviceSelect.value=requested;
 }
-showQuestions(serviceSelect.value);
-serviceSelect.addEventListener('change',()=>showQuestions(serviceSelect.value));
 const requiredFields={
  web:['web-kind','web-goal'],crm:['crm-records','crm-problem'],automation:['auto-task','auto-process'],
  creative:['creative-need','creative-business'],data:['data-source','data-problem'],
  personal:['profile-goal','profile-background'],unsure:['unsure-challenge']
 };
-Object.values(requiredFields).flat().forEach(id=>{const field=document.getElementById(id);if(field){field.dataset.required='true';}});
+Object.values(requiredFields).flat().forEach(id=>{
+  const field=document.getElementById(id);
+  if(field)field.dataset.required='true';
+});
 showQuestions(serviceSelect.value);
-const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
+serviceSelect.addEventListener('change',()=>showQuestions(serviceSelect.value));
+const year=document.getElementById('year');
+if(year)year.textContent=new Date().getFullYear();
 form.addEventListener('submit',event=>{
- event.preventDefault();
- if(!form.reportValidity())return;
- const data=new FormData(form);
- const labels={
- web:'01 / Web & Applications',crm:'02 / CRM Systems',automation:'03 / Automation',
- creative:'04 / Creative & Branding',data:'05 / Data & Reporting',personal:'06 / Personal Digital Profiles',
- unsure:'Help me choose the right service'
- };
- const lines=['Hello Gava Originator Digital Tech. I would like to discuss a project.',''];
- for(const [key,value] of data.entries()){
-  if(value && key!=='website')lines.push(key.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase())+': '+value);
- }
- lines.push('','Please let me know the next steps. Thank you.');
- const message=lines.join('\n');
- const url='https://wa.me/?text='+encodeURIComponent(message);
- window.open(url,'_blank','noopener,noreferrer');
+  event.preventDefault();
+  if(!form.reportValidity())return;
+  const data=new FormData(form);
+  const serviceNames={
+    web:'01 / Web & Applications',crm:'02 / CRM Systems',automation:'03 / Automation',
+    creative:'04 / Creative & Branding',data:'05 / Data & Reporting',
+    personal:'06 / Personal Digital Profiles',unsure:'Help me choose the right service'
+  };
+  const lines=[
+    'Hello Gava Originator Digital Tech. I would like to discuss a project.',
+    '',
+    'Service: '+(serviceNames[data.get('service')]||data.get('service')),
+    ''
+  ];
+  for(const [key,value] of data.entries()){
+    if(value && key!=='service'){
+      const label=key.replace(/_/g,' ').replace(/\b\w/g,letter=>letter.toUpperCase());
+      lines.push(label+': '+value);
+    }
+  }
+  lines.push('','Please let me know the next steps. Thank you.');
+  const url='https://wa.me/?text='+encodeURIComponent(lines.join('\n'));
+  window.open(url,'_blank','noopener,noreferrer');
 });
 </script>
 </body>
