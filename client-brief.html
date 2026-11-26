@@ -147,7 +147,7 @@ function showQuestions(value){
     const active=group.dataset.questions===value;
     group.hidden=!active;
     group.querySelectorAll('input,select,textarea').forEach(field=>{
-      field.required=active && field.dataset.required==='true';
+      field.disabled=!active;\n      field.required=active && field.dataset.required==='true';
     });
   });
 }
