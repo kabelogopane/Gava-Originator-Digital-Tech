@@ -65,3 +65,20 @@ if (projectForm) {
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   });
 }
+
+
+// Make each service card open its dedicated information page.
+document.querySelectorAll('.service-card[data-service-link]').forEach(card => {
+  const destination = card.dataset.serviceLink;
+  card.addEventListener('click', event => {
+    if (event.target.closest('a,button,input,select,textarea')) return;
+    window.location.href = destination;
+  });
+  card.addEventListener('keydown', event => {
+    if (event.target !== card) return;
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      window.location.href = destination;
+    }
+  });
+});
