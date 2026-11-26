@@ -39,3 +39,29 @@ if ('IntersectionObserver' in window) {
   }, {rootMargin: '-30% 0px -60% 0px'});
   document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
 }
+
+
+const projectForm = document.getElementById('project-enquiry-form');
+if (projectForm) {
+  projectForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!projectForm.reportValidity()) return;
+
+    const data = new FormData(projectForm);
+    const message = [
+      'Hello Gava Originator Digital Tech. I would like to make a project enquiry.',
+      '',
+      'Name: ' + data.get('name'),
+      'Business: ' + (data.get('business') || 'Not provided'),
+      'Email or phone: ' + data.get('contact'),
+      'Help needed: ' + data.get('service'),
+      'More about my project: ' + data.get('message'),
+      'When I would like to start: ' + (data.get('timing') || 'Flexible'),
+      '',
+      'Please let me know the next steps. Thank you.'
+    ].join('\n');
+
+    const whatsappUrl = 'https://wa.me/?text=' + encodeURIComponent(message);
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  });
+}
