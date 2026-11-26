@@ -85,3 +85,13 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offse
 .enquiry-submit{width:100%;justify-content:center;border:0;cursor:pointer;font:700 11px var(--display)}
 .form-note{font-size:9px;line-height:1.65;color:#929db3;margin:13px 0 0}
 @media(max-width:700px){.enquiry-layout{grid-template-columns:1fr;gap:30px;padding-top:40px}.enquiry-intro h2{font-size:clamp(48px,11vw,68px)}.enquiry-intro>p:not(.mini-label){font-size:12px}.project-form{padding:18px}.project-form input,.project-form select,.project-form textarea{font-size:16px}}
+
+
+/* Purpose section: human-centred small business image */
+.purpose-image-wrap{position:relative;margin:0 0 28px;min-height:260px;height:clamp(260px,34vw,430px);overflow:hidden;border:1px solid #303a55;border-radius:12px;background:#141d30;box-shadow:0 24px 65px #0004}
+.purpose-image{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:center 44%;filter:saturate(.88);transition:transform .7s ease,filter .7s ease}
+.purpose-image-wrap:hover .purpose-image{transform:scale(1.025);filter:saturate(1)}
+.purpose-image-wrap:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#090d18c9);pointer-events:none}
+.purpose-image-caption{position:absolute;z-index:1;left:24px;right:24px;bottom:20px;display:flex;align-items:center;justify-content:space-between;color:#f7f8fc;font:700 9px var(--display);letter-spacing:.13em}
+.purpose-image-caption b{font-size:24px;color:var(--lime)}
+@media(max-width:700px){.purpose-image-wrap{height:260px;min-height:260px;margin-bottom:22px}.purpose-image{object-position:center}.purpose-image-caption{left:16px;right:16px;bottom:15px;font-size:8px}}
