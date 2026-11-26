@@ -85,3 +85,17 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offse
 .enquiry-submit{width:100%;justify-content:center;border:0;cursor:pointer;font:700 11px var(--display)}
 .form-note{font-size:9px;line-height:1.65;color:#929db3;margin:13px 0 0}
 @media(max-width:700px){.enquiry-layout{grid-template-columns:1fr;gap:30px;padding-top:40px}.enquiry-intro h2{font-size:clamp(48px,11vw,68px)}.enquiry-intro>p:not(.mini-label){font-size:12px}.project-form{padding:18px}.project-form input,.project-form select,.project-form textarea{font-size:16px}}
+
+/* Personal digital CV and portfolio service */
+.service-personal{grid-column:span 3}
+.personal-graphic{display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#7774ff35,transparent 65%)}
+.cv-sheet{width:58%;height:132px;padding:13px 15px;border:1px solid #a6a0ff88;border-radius:7px;background:linear-gradient(145deg,#f5f4ff,#dcdcff);color:#171b39;box-shadow:12px 13px 0 #7774ff35,0 18px 38px #0005;transform:rotate(-4deg);display:grid;grid-template-columns:42px 1fr;gap:10px;align-content:start}
+.cv-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#7774ff;color:#fff;font:700 9px var(--display)}
+.cv-lines{display:flex;flex-direction:column;gap:6px;padding-top:3px}
+.cv-lines i,.cv-lines b{height:5px;border-radius:5px;background:#a6a7c5;width:92%}
+.cv-lines i:nth-child(2){width:70%}.cv-lines i:nth-child(3){width:82%}.cv-lines b{width:48%;height:8px;background:#7774ff;margin-top:5px}
+.cv-label{grid-column:1/-1;margin-top:9px;font:700 6px var(--display);letter-spacing:.1em;color:#514bb4}
+@media(max-width:950px){.service-personal{grid-column:span 3}}
+@media(max-width:700px){.service-personal{grid-column:span 2}.personal-graphic{height:145px}}
+@media(max-width:380px){.service-personal{grid-column:span 1}}
+
