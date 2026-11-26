@@ -63,3 +63,25 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offse
  .art-core:after{inset:-25px}
 }
 @media(prefers-reduced-motion:reduce){.art-core{animation:none}.work-preview{transition:none}}
+
+
+/* Friendly project enquiry form */
+.project-enquiry{background:linear-gradient(145deg,#0e1527,#121a31);border-top:1px solid #27314b;border-bottom:1px solid #27314b}
+.enquiry-layout{display:grid;grid-template-columns:.85fr 1fr;gap:9%;align-items:start;padding-top:58px}
+.enquiry-intro h2{font:600 clamp(48px,6vw,76px)/.98 var(--display);letter-spacing:-.075em;margin:20px 0}
+.enquiry-intro>p:not(.mini-label){font-size:13px;line-height:1.85;color:#b3bdd0;max-width:440px}
+.enquiry-promise{display:flex;gap:13px;align-items:flex-start;margin-top:30px;padding:17px;border:1px solid #303a55;border-radius:8px;background:#ffffff06}
+.enquiry-promise>span{color:var(--lime);font-size:22px}
+.enquiry-promise p{font-size:11px;line-height:1.7;color:#aeb8ca;margin:0}
+.enquiry-promise strong{color:#f6f7fb}
+.project-form{padding:26px;background:#171f34;border:1px solid #303a55;border-radius:12px;box-shadow:0 20px 55px #0003}
+.project-form .form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:17px}
+.project-form label{font:600 11px var(--font);color:#e7eaf3}
+.project-form input,.project-form select,.project-form textarea{width:100%;border:1px solid #3b4764;border-radius:6px;background:#0d1425;color:#f6f7fb;padding:13px 14px;font:12px var(--font);outline:none;transition:border-color .2s,box-shadow .2s}
+.project-form input::placeholder,.project-form textarea::placeholder{color:#77839d}
+.project-form select:invalid{color:#77839d}
+.project-form input:focus,.project-form select:focus,.project-form textarea:focus{border-color:var(--purple2);box-shadow:0 0 0 3px #7774ff25}
+.project-form textarea{resize:vertical;min-height:120px}
+.enquiry-submit{width:100%;justify-content:center;border:0;cursor:pointer;font:700 11px var(--display)}
+.form-note{font-size:9px;line-height:1.65;color:#929db3;margin:13px 0 0}
+@media(max-width:700px){.enquiry-layout{grid-template-columns:1fr;gap:30px;padding-top:40px}.enquiry-intro h2{font-size:clamp(48px,11vw,68px)}.enquiry-intro>p:not(.mini-label){font-size:12px}.project-form{padding:18px}.project-form input,.project-form select,.project-form textarea{font-size:16px}}
