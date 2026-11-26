@@ -1,18 +1,31 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.navigation');
 
+function closeMenu() {
+  if (!menuButton || !navigation) return;
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Open menu');
+  navigation.classList.remove('open');
+}
+
 if (menuButton && navigation) {
   menuButton.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
     navigation.classList.toggle('open', !isOpen);
   });
 
   navigation.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menuButton.setAttribute('aria-expanded', 'false');
-      navigation.classList.remove('open');
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 650) closeMenu();
   });
 }
 
@@ -31,7 +44,7 @@ if ('IntersectionObserver' in window) {
         });
       }
     });
-  }, { rootMargin: '-35% 0px -55% 0px' });
+  }, { rootMargin: '-30% 0px -60% 0px' });
 
   sections.forEach((section) => observer.observe(section));
 }
