@@ -126,3 +126,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offse
 .brand-mark{background:#fff;color:#090d18}
 .brand-mark span{color:#090d18}
 .brand-name,.brand-name span{color:#fff}
+
+/* Header and footer logo: blue tile with white G */
+.site-header .brand-mark,
+.footer .brand-mark{background:#246BFD;color:#fff}
+.site-header .brand-mark span,
+.footer .brand-mark span{color:#fff}
