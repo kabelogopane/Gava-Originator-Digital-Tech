@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tell Gava Originator Digital Tech what you need help with. Choose a service and answer a few simple questions.">
+<meta name="theme-color" content="#090d18">
+<title>Tell Us What You Need — Gava Originator Digital Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261126-client-brief">
+<style>
+.brief-hero{padding:78px 7vw 45px;background:radial-gradient(circle at 82% 15%,#7774ff26,transparent 36%),#0b1120}
+.brief-hero h1{font:600 clamp(46px,7vw,82px)/.98 var(--display);letter-spacing:-.08em;margin:22px 0}
+.brief-hero h1 span{color:var(--lime)}
+.brief-hero p{max-width:650px;color:#b5bfd1;font-size:14px;line-height:1.8}
+.brief-wrap{max-width:1050px;margin:auto;padding:50px 7vw 90px}
+.brief-card{background:linear-gradient(145deg,#171f35,#101727);border:1px solid #303a55;border-radius:12px;padding:clamp(20px,4vw,38px);box-shadow:0 20px 55px #0003}
+.brief-progress{display:flex;justify-content:space-between;gap:12px;color:#aeb8ca;font:700 10px var(--display);letter-spacing:.08em;margin-bottom:24px}
+.brief-progress span:last-child{color:var(--lime)}
+.brief-section-title{font:600 27px var(--display);letter-spacing:-.05em;margin:0 0 8px}
+.brief-intro{color:#aeb8ca;font-size:12px;line-height:1.7;margin:0 0 25px}
+.brief-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.brief-field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.brief-field.full{grid-column:1/-1}
+.brief-field label{font:600 11px var(--font);color:#e7eaf3}
+.brief-field input,.brief-field select,.brief-field textarea{width:100%;border:1px solid #3b4764;border-radius:6px;background:#0d1425;color:#f6f7fb;padding:13px 14px;font:12px var(--font);outline:none}
+.brief-field input::placeholder,.brief-field textarea::placeholder{color:#77839d}
+.brief-field input:focus,.brief-field select:focus,.brief-field textarea:focus{border-color:var(--purple2);box-shadow:0 0 0 3px #7774ff25}
+.brief-field textarea{resize:vertical;min-height:100px}
+.brief-service-questions{margin:30px 0 0;padding-top:26px;border-top:1px solid #303a55}
+.brief-service-questions[hidden]{display:none}
+.brief-service-questions .brief-grid{margin-top:20px}
+.brief-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:28px}
+.brief-submit{border:0;cursor:pointer}
+.brief-note{color:#929db3;font-size:10px;line-height:1.7;margin:17px 0 0}
+.brief-back{display:inline-flex;color:var(--lime);font:700 10px var(--display);letter-spacing:.08em;margin-top:25px}
+@media(max-width:700px){.brief-hero{padding:60px 22px 35px}.brief-hero p{font-size:12px}.brief-wrap{padding:28px 16px 65px}.brief-grid{grid-template-columns:1fr}.brief-field.full{grid-column:auto}.brief-field input,.brief-field select,.brief-field textarea{font-size:16px}.brief-progress{font-size:8px}}
+</style>
+</head>
+<body>
+<div class="announcement"><span class="pulse"></span> LET'S FIND THE RIGHT SOLUTION <span class="announcement-right">GAVA ORIGINATOR DIGITAL TECH <b>↗</b></span></div>
+<header class="site-header"><a class="brand" href="index.html#home" aria-label="Gava Originator Digital Tech home"><span class="brand-mark" style="background:#246BFD;color:#fff">G<span style="color:#fff">.</span></span><span class="brand-name">Gava Originator<br><span>Digital Tech</span></span></a><a class="nav-cta" href="services.html">Our services <span>↗</span></a></header>
+<main>
+<section class="brief-hero"><div class="eyebrow"><span class="eyebrow-dot"></span> CLIENT DISCOVERY</div><h1>Let's understand<br><span>what you need.</span></h1><p>Answer a few simple questions about the challenge you are facing. Your answers will help us understand your situation and recommend a practical next step. You do not need to know the technical terms.</p></section>
+<section class="brief-wrap" id="questions">
+<form class="brief-card" id="client-brief-form">
+<div class="brief-progress"><span>GAVA / PROJECT DISCOVERY</span><span>ABOUT 3–5 MINUTES</span></div>
+<h2 class="brief-section-title">First, tell us about you.</h2>
+<p class="brief-intro">These details help us know who we are speaking with and how to respond.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="client-name">Your name *</label><input id="client-name" name="name" autocomplete="name" maxlength="80" required placeholder="Your full name"></div>
+<div class="brief-field"><label for="client-business">Business or organisation</label><input id="client-business" name="business" autocomplete="organization" maxlength="100" placeholder="If applicable"></div>
+<div class="brief-field"><label for="client-contact">Email or phone number *</label><input id="client-contact" name="contact" maxlength="100" required placeholder="How can we contact you?"></div>
+<div class="brief-field"><label for="client-role">Your role</label><select id="client-role" name="role"><option value="">Choose one (optional)</option><option>Business owner</option><option>Manager or team member</option><option>Student or graduate</option><option>Job seeker</option><option>Freelancer or creative</option><option>Other</option></select></div>
+<div class="brief-field full"><label for="client-service">Which service do you need? *</label><select id="client-service" name="service" required><option value="">Choose a service</option><option value="web">01 / Web & Applications</option><option value="crm">02 / CRM Systems</option><option value="automation">03 / Automation</option><option value="creative">04 / Creative & Branding</option><option value="data">05 / Data & Reporting</option><option value="personal">06 / Personal Digital Profiles</option><option value="unsure">I'm not sure — help me decide</option></select></div>
+</div>
+
+<section class="brief-service-questions" data-questions="web" hidden>
+<h2 class="brief-section-title">Web & Applications</h2><p class="brief-intro">Let's understand what you want your website or digital tool to do.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="web-kind">What would you like to create? *</label><select id="web-kind" name="web_kind"><option value="">Choose one</option><option>Business website</option><option>Landing page</option><option>Online portfolio</option><option>Online store or product showcase</option><option>Browser-based tool or web application</option><option>Improve or update an existing website</option><option>Not sure yet</option></select></div>
+<div class="brief-field"><label for="web-status">Do you already have a website?</label><select id="web-status" name="web_status"><option value="">Choose one</option><option>No, starting from scratch</option><option>Yes, and I want to improve it</option><option>Yes, but it is not working properly</option><option>I have a domain but no website</option></select></div>
+<div class="brief-field full"><label for="web-goal">What should the website or tool help you achieve? *</label><textarea id="web-goal" name="web_goal" placeholder="For example: explain my services, receive bookings, show my work or manage a task."></textarea></div>
+<div class="brief-field full"><label for="web-features">What would visitors or users need to do on it?</label><textarea id="web-features" name="web_features" placeholder="For example: view services, submit an enquiry, book, buy, sign in or upload information."></textarea></div>
+<div class="brief-field"><label for="web-pages">Do you know which pages you need?</label><input id="web-pages" name="web_pages" placeholder="Home, About, Services, Contact…"></div>
+<div class="brief-field"><label for="web-reference">Do you have an example website you like?</label><input id="web-reference" name="web_reference" placeholder="Paste a link (optional)"></div>
+</div></section>
+
+<section class="brief-service-questions" data-questions="crm" hidden>
+<h2 class="brief-section-title">CRM Systems</h2><p class="brief-intro">Let's look at the people, records and follow-ups you need to manage.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="crm-records">What do you need to keep track of? *</label><select id="crm-records" name="crm_records"><option value="">Choose one</option><option>Customers and contacts</option><option>Sales leads and enquiries</option><option>Candidates and applications</option><option>Programmes, services or cases</option><option>More than one of these</option><option>Something else</option></select></div>
+<div class="brief-field"><label for="crm-current">How do you manage this information now?</label><select id="crm-current" name="crm_current"><option value="">Choose one</option><option>Paper or notebooks</option><option>Excel or Google Sheets</option><option>WhatsApp, email or messages</option><option>Several different tools</option><option>Already using a CRM</option><option>No system yet</option></select></div>
+<div class="brief-field full"><label for="crm-problem">What is difficult about the way you manage things today? *</label><textarea id="crm-problem" name="crm_problem" placeholder="For example: losing track of enquiries, duplicate records or missed follow-ups."></textarea></div>
+<div class="brief-field full"><label for="crm-users">Who will use the system and roughly how many people?</label><input id="crm-users" name="crm_users" placeholder="For example: me and two staff members"></div>
+<div class="brief-field full"><label for="crm-reports">What would you like to see at a glance?</label><textarea id="crm-reports" name="crm_reports" placeholder="For example: new enquiries, application status or follow-ups due."></textarea></div>
+</div></section>
+
+<section class="brief-service-questions" data-questions="automation" hidden>
+<h2 class="brief-section-title">Automation</h2><p class="brief-intro">Tell us about a repeated task or process you would like to make easier.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="auto-task">Which task takes too much time? *</label><select id="auto-task" name="auto_task"><option value="">Choose one</option><option>Recording new enquiries</option><option>Following up with customers</option><option>Sending reminders or notifications</option><option>Moving information between tools</option><option>Approvals or handovers</option><option>Repeated data entry</option><option>Other / not sure</option></select></div>
+<div class="brief-field"><label for="auto-frequency">How often does it happen?</label><select id="auto-frequency" name="auto_frequency"><option value="">Choose one</option><option>Several times a day</option><option>Daily</option><option>Weekly</option><option>Monthly</option><option>Only sometimes</option></select></div>
+<div class="brief-field full"><label for="auto-process">What happens from start to finish today? *</label><textarea id="auto-process" name="auto_process" placeholder="Describe the steps as simply as you can."></textarea></div>
+<div class="brief-field full"><label for="auto-tools">Which apps or tools do you currently use?</label><input id="auto-tools" name="auto_tools" placeholder="For example: email, WhatsApp, spreadsheets, Salesforce"></div>
+<div class="brief-field full"><label for="auto-result">What would a better process look like?</label><textarea id="auto-result" name="auto_result" placeholder="What would you like to happen automatically, or become easier?"></textarea></div>
+</div></section>
+
+<section class="brief-service-questions" data-questions="creative" hidden>
+<h2 class="brief-section-title">Creative & Branding</h2><p class="brief-intro">Let's understand how you want your business or project to look and feel.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="creative-need">What do you need designed? *</label><select id="creative-need" name="creative_need"><option value="">Choose one</option><option>Logo or brand identity</option><option>Company profile</option><option>Digital flyer or advert</option><option>Social media graphics</option><option>Presentation or document</option><option>A combination of these</option></select></div>
+<div class="brief-field"><label for="creative-audience">Who do you want to reach?</label><input id="creative-audience" name="creative_audience" placeholder="Your customers or audience"></div>
+<div class="brief-field full"><label for="creative-business">What does your business or project do? *</label><textarea id="creative-business" name="creative_business" placeholder="Tell us what you offer and what makes it different."></textarea></div>
+<div class="brief-field"><label for="creative-style">What style do you prefer?</label><select id="creative-style" name="creative_style"><option value="">Choose one</option><option>Modern and professional</option><option>Clean and minimal</option><option>Bold and creative</option><option>Elegant and premium</option><option>Friendly and colourful</option><option>Not sure — suggest a direction</option></select></div>
+<div class="brief-field"><label for="creative-assets">Do you have a logo, colours or existing materials?</label><select id="creative-assets" name="creative_assets"><option value="">Choose one</option><option>Yes, I can share them</option><option>Some materials, but need improvement</option><option>No, starting from scratch</option></select></div>
+<div class="brief-field full"><label for="creative-notes">Any examples or other details we should know?</label><textarea id="creative-notes" name="creative_notes" placeholder="You can paste links or describe what you like."></textarea></div>
+</div></section>
+
+<section class="brief-service-questions" data-questions="data" hidden>
+<h2 class="brief-section-title">Data & Reporting</h2><p class="brief-intro">Let's find out what information you have and what you want it to tell you.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="data-source">Where is your information kept? *</label><select id="data-source" name="data_source"><option value="">Choose one</option><option>Excel spreadsheets</option><option>Google Sheets</option><option>Business software or CRM</option><option>Paper records</option><option>Several places</option><option>Not collected yet</option></select></div>
+<div class="brief-field"><label for="data-volume">Roughly how much information is there?</label><select id="data-volume" name="data_volume"><option value="">Choose one</option><option>Less than 100 records</option><option>100–1,000 records</option><option>More than 1,000 records</option><option>Not sure</option></select></div>
+<div class="brief-field full"><label for="data-problem">What is difficult about your current information or reports? *</label><textarea id="data-problem" name="data_problem" placeholder="For example: information is messy, reports take too long or you cannot see performance clearly."></textarea></div>
+<div class="brief-field full"><label for="data-questions">What questions should the report or dashboard answer?</label><textarea id="data-questions" name="data_questions" placeholder="For example: Which services are most requested? How many enquiries become customers?"></textarea></div>
+<div class="brief-field full"><label for="data-output">What would be most useful?</label><select id="data-output" name="data_output"><option value="">Choose one</option><option>A clean, organised spreadsheet</option><option>A regular report</option><option>A visual dashboard</option><option>Charts and summaries</option><option>Advice on improving data quality</option><option>Not sure yet</option></select></div>
+</div></section>
+
+<section class="brief-service-questions" data-questions="personal" hidden>
+<h2 class="brief-section-title">Personal Digital Profiles</h2><p class="brief-intro">Let's understand the opportunity you are preparing for and how you want to present your experience.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="profile-goal">What is your main goal? *</label><select id="profile-goal" name="profile_goal"><option value="">Choose one</option><option>Apply for jobs</option><option>Apply for internships or learnerships</option><option>Showcase my work or projects</option><option>Promote my freelance services</option><option>Build my professional online presence</option><option>Other</option></select></div>
+<div class="brief-field"><label for="profile-type">What would you like created?</label><select id="profile-type" name="profile_type"><option value="">Choose one</option><option>Digital CV</option><option>Online resume/profile</option><option>Portfolio website</option><option>CV and portfolio combination</option><option>Not sure — advise me</option></select></div>
+<div class="brief-field full"><label for="profile-background">Tell us about your education, experience, skills or work. *</label><textarea id="profile-background" name="profile_background" placeholder="A short overview is enough. Do not include identity numbers or private documents here."></textarea></div>
+<div class="brief-field"><label for="profile-field">What type of work or industry interests you?</label><input id="profile-field" name="profile_field" placeholder="For example: IT, administration, design"></div>
+<div class="brief-field"><label for="profile-materials">Do you already have a CV or examples of your work?</label><select id="profile-materials" name="profile_materials"><option value="">Choose one</option><option>Yes, I can share them later</option><option>I have some information but no CV</option><option>No, I need help starting</option></select></div>
+</div></section>
+
+<section class="brief-service-questions" data-questions="unsure" hidden>
+<h2 class="brief-section-title">Let's work it out together.</h2><p class="brief-intro">You do not need to choose a service before speaking to us.</p>
+<div class="brief-grid"><div class="brief-field full"><label for="unsure-challenge">What problem are you trying to solve? *</label><textarea id="unsure-challenge" name="unsure_challenge" placeholder="Tell us what is happening and what you would like to improve."></textarea></div><div class="brief-field full"><label for="unsure-outcome">If we could improve one thing for you, what would it be?</label><textarea id="unsure-outcome" name="unsure_outcome" placeholder="What would make the biggest difference?"></textarea></div></div>
+</section>
+
+<div class="brief-service-questions" style="display:block">
+<h2 class="brief-section-title">A few final details.</h2><p class="brief-intro">These are optional. They help us understand what is realistic for you.</p>
+<div class="brief-grid">
+<div class="brief-field"><label for="client-budget">Do you have a budget range in mind?</label><select id="client-budget" name="budget"><option value="">Prefer to discuss</option><option>Under R500</option><option>R500 – R1,000</option><option>R1,000 – R2,500</option><option>R2,500 – R5,000</option><option>R5,000+</option><option>Not sure yet</option></select></div>
+<div class="brief-field"><label for="client-timing">When would you like to start?</label><select id="client-timing" name="timing"><option value="">Choose one</option><option>As soon as possible</option><option>Within the next month</option><option>In 1–3 months</option><option>I'm exploring options</option><option>Flexible</option></select></div>
+<div class="brief-field full"><label for="client-extra">Anything else we should know?</label><textarea id="client-extra" name="extra" placeholder="Share any other useful details. Please do not include passwords, ID numbers, financial details or confidential customer information."></textarea></div>
+</div></div>
+<div class="brief-actions"><button class="btn btn-lime brief-submit" type="submit">Prepare my enquiry <span>↗</span></button><a class="btn btn-ghost" href="services.html">Back to services</a></div>
+<p class="brief-note">Your answers are prepared as a message for you to review and share using WhatsApp. This website does not store or automatically send your answers to Gava. Do not include passwords, identity numbers or confidential information.</p>
+</form>
+<a class="brief-back" href="services.html">← BACK TO SERVICE GUIDE</a>
+</section>
+</main>
+<footer class="footer"><a class="brand footer-brand" href="index.html#home"><span class="brand-mark" style="background:#246BFD;color:#fff">G<span style="color:#fff">.</span></span><span class="brand-name">Gava Originator<br><span>Digital Tech</span></span></a><span>© <span id="year"></span> GAVA ORIGINATOR DIGITAL TECH.</span><a href="#questions">BACK TO QUESTIONS ↑</a></footer>
+<script>
+const form=document.getElementById('client-brief-form');
+const serviceSelect=document.getElementById('client-service');
+const groups=[...document.querySelectorAll('[data-questions]')];
+function showQuestions(value){
+  groups.forEach(group=>{
+    const active=group.dataset.questions===value;
+    group.hidden=!active;
+    group.querySelectorAll('input,select,textarea').forEach(field=>{
+      field.required=active && field.dataset.required==='true';
+    });
+  });
+}
+const params=new URLSearchParams(location.search);
+const requested=params.get('service');
+if(requested && [...serviceSelect.options].some(option=>option.value===requested)){
+  serviceSelect.value=requested;
+}
+showQuestions(serviceSelect.value);
+serviceSelect.addEventListener('change',()=>showQuestions(serviceSelect.value));
+const requiredFields={
+ web:['web-kind','web-goal'],crm:['crm-records','crm-problem'],automation:['auto-task','auto-process'],
+ creative:['creative-need','creative-business'],data:['data-source','data-problem'],
+ personal:['profile-goal','profile-background'],unsure:['unsure-challenge']
+};
+Object.values(requiredFields).flat().forEach(id=>{const field=document.getElementById(id);if(field){field.dataset.required='true';}});
+showQuestions(serviceSelect.value);
+const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
+form.addEventListener('submit',event=>{
+ event.preventDefault();
+ if(!form.reportValidity())return;
+ const data=new FormData(form);
+ const labels={
+ web:'01 / Web & Applications',crm:'02 / CRM Systems',automation:'03 / Automation',
+ creative:'04 / Creative & Branding',data:'05 / Data & Reporting',personal:'06 / Personal Digital Profiles',
+ unsure:'Help me choose the right service'
+ };
+ const lines=['Hello Gava Originator Digital Tech. I would like to discuss a project.',''];
+ for(const [key,value] of data.entries()){
+  if(value && key!=='website')lines.push(key.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase())+': '+value);
+ }
+ lines.push('','Please let me know the next steps. Thank you.');
+ const message=lines.join('\n');
+ const url='https://wa.me/?text='+encodeURIComponent(message);
+ window.open(url,'_blank','noopener,noreferrer');
+});
+</script>
+</body>
+</html>
