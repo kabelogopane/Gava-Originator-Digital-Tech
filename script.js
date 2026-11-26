@@ -61,7 +61,7 @@ if (projectForm) {
       'Please let me know the next steps. Thank you.'
     ].join('\n');
 
-    const whatsappUrl = 'https://wa.me/?text=' + encodeURIComponent(message);
+    const whatsappUrl = 'https://wa.me/27706797350?text=' + encodeURIComponent(message);
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   });
 }
