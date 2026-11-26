@@ -224,3 +224,16 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offse
 .founder-role{margin:7px 0 15px!important;color:#b8b5ff!important;font-size:11px!important;font-weight:600}
 .founder-profile-copy>p:not(.mini-label){max-width:760px;margin:0 0 11px;color:#b5bfd1;font-size:12px;line-height:1.8}
 @media(max-width:600px){.founder-profile{padding:19px;margin:25px 0}.founder-profile-content{grid-template-columns:1fr;gap:15px}.founder-initials{width:62px;height:62px;border-radius:15px;font-size:21px}.founder-profile-copy>p:not(.mini-label){font-size:11px}}
+
+
+/* Professional portfolio preview card */
+.preview-portfolio{min-height:270px;padding:19px 22px;background:radial-gradient(circle at 82% 48%,#353579 0%,#171d3b 35%,#0b1120 78%);color:#f6f7fb;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.preview-portfolio:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:25px 25px;mask-image:linear-gradient(90deg,transparent,#000)}
+.portfolio-preview-top,.portfolio-preview-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;font:700 8px var(--display);letter-spacing:.13em;color:#aeb9d1}
+.portfolio-preview-main{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start}
+.portfolio-preview-kicker{font:700 8px var(--display);letter-spacing:.16em;color:var(--lime);margin-bottom:13px}
+.portfolio-preview-main strong{font:600 clamp(36px,5vw,54px)/.88 var(--display);letter-spacing:-.08em;color:#f6f7fb}
+.portfolio-preview-main strong em{font-style:normal;background:linear-gradient(90deg,#aaa4ff,#83a9ff,#d3ff5c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.portfolio-preview-role{margin-top:15px;font:700 8px var(--display);letter-spacing:.12em;color:#b8c2d8}
+.portfolio-preview-orb{position:absolute;width:190px;height:190px;border:1px solid #9d9aff55;border-radius:50%;right:-45px;top:38px;box-shadow:0 0 0 17px #7774ff0a,0 0 0 35px #7774ff08}
+.portfolio-preview-orb:after{content:"KG";position:absolute;inset:0;display:grid;place-items:center;color:#ffffff12;font:700 75px var(--display);letter-spacing:-.1em}
