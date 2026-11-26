@@ -120,3 +120,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offse
 .service-card:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
 @media(max-width:950px){.service-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.service-card .service-graphic{flex-basis:160px}}
 @media(max-width:700px){.service-cards{grid-template-columns:1fr;gap:14px}.service-card,.service-feature,.service-data,.service-personal{grid-column:auto;padding:18px}.service-card .service-graphic{flex-basis:165px}.service-card h3{font-size:23px;min-height:0}.service-card>p{font-size:11px}.service-details li{font-size:10px}.card-link{font-size:8px}}
+
+
+/* White GOD-Tech wordmark treatment */
+.brand-mark{background:#fff;color:#090d18}
+.brand-mark span{color:#090d18}
+.brand-name,.brand-name span{color:#fff}
